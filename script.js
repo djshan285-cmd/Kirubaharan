@@ -432,15 +432,29 @@ function animateCounter(el) {
     btnIcon.style.display = 'none';
     btnLoader.style.display = 'inline-block';
 
+    const subject = qs('#subject')?.value.trim() || '(No subject)';
+
     try {
+      // 1. Save to Firestore
       await window.db.collection('messages').add({
         name,
         email,
+        subject,
         message,
         sentAt: new Date().toISOString()
       });
+
+      // 2. Send email via EmailJS
+      // Replace YOUR_SERVICE_ID and YOUR_TEMPLATE_ID with values from emailjs.com
+      await emailjs.send('service_b87m9s4', 'YOUR_TEMPLATE_ID', {
+        from_name:  name,
+        from_email: email,
+        subject:    subject,
+        message:    message,
+        reply_to:   email,
+      });
     } catch (err) {
-      console.error('Firebase error:', err);
+      console.error('Send error:', err);
       setError('messageError', 'Failed to send. Please try again.');
       submitBtn.disabled = false;
       btnText.textContent = 'Send Message';
@@ -470,12 +484,21 @@ function animateCounter(el) {
 })();
 
 // ============================================================
-// 13. SCROLL TO TOP
+// 13. SCROLL TO TOP + PROGRESS RING
 // ============================================================
 function toggleScrollTop() {
-  const btn = qs('#scrollTop');
+  const btn  = qs('#scrollTop');
+  const ring = qs('#progressRingFill');
   if (!btn) return;
+
   btn.classList.toggle('visible', window.scrollY > 400);
+
+  if (ring) {
+    const scrollable   = document.documentElement.scrollHeight - window.innerHeight;
+    const scrolled     = scrollable > 0 ? window.scrollY / scrollable : 0;
+    const circumference = 113.1;
+    ring.style.strokeDashoffset = (circumference * (1 - scrolled)).toFixed(2);
+  }
 }
 
 qs('#scrollTop')?.addEventListener('click', () => {
@@ -540,3 +563,27 @@ qsa('a[href^="#"]').forEach(anchor => {
 // 17. ACTIVE NAV HIGHLIGHT (initial)
 // ============================================================
 window.dispatchEvent(new Event('scroll'));
+
+// ============================================================
+// 18. FLEET DASHBOARD — CHART BAR ANIMATION
+// ============================================================
+(function initFleetChart() {
+  const section = qs('#dashboard');
+  if (!section) return;
+
+  const observer = new IntersectionObserver(entries => {
+    if (entries[0].isIntersecting) {
+      const chartArea = qs('.chart-area', section);
+      const areaH = chartArea ? chartArea.clientHeight : 180;
+      qsa('.chart-bar', section).forEach((bar, i) => {
+        const pct = parseInt(bar.dataset.height) || 0;
+        setTimeout(() => {
+          bar.style.height = Math.round(pct / 100 * areaH) + 'px';
+        }, i * 80);
+      });
+      observer.disconnect();
+    }
+  }, { threshold: 0.25 });
+
+  observer.observe(section);
+})();

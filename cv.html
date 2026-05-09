@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CV — M. Kirubagaran | Fleet & Transport Operations Incharge</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    /* ---- RESET ---- */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { font-size: 10pt; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f4f4f8;
+      color: #1a1a2e;
+      line-height: 1.5;
+    }
+
+    /* ---- PAGE WRAPPER ---- */
+    .cv-page {
+      width: 210mm;
+      min-height: 297mm;
+      margin: 24px auto;
+      background: #fff;
+      box-shadow: 0 4px 40px rgba(0,0,0,0.15);
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ---- HEADER ---- */
+    .cv-header {
+      background: linear-gradient(135deg, #0f2952 0%, #1e4080 60%, #2563eb 100%);
+      color: #fff;
+      padding: 28px 36px 24px;
+      display: flex;
+      align-items: flex-start;
+      gap: 28px;
+    }
+    .cv-header-text { flex: 1; }
+    .cv-name {
+      font-size: 22pt;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      line-height: 1.1;
+      margin-bottom: 4px;
+    }
+    .cv-role {
+      font-size: 11pt;
+      font-weight: 500;
+      opacity: 0.9;
+      margin-bottom: 14px;
+    }
+    .cv-contacts {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px 18px;
+      font-size: 8.5pt;
+    }
+    .cv-contacts span {
+      display: flex; align-items: center; gap: 5px; opacity: 0.9;
+    }
+    .cv-contacts span::before { content: attr(data-icon); font-style: normal; }
+    .cv-badge {
+      background: rgba(255,255,255,0.2);
+      border: 1px solid rgba(255,255,255,0.35);
+      border-radius: 8px;
+      padding: 10px 18px;
+      text-align: center;
+      min-width: 100px;
+      flex-shrink: 0;
+    }
+    .cv-badge-num { font-size: 20pt; font-weight: 900; line-height: 1; }
+    .cv-badge-label { font-size: 7.5pt; opacity: 0.85; margin-top: 3px; }
+
+    /* ---- BODY ---- */
+    .cv-body {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      flex: 1;
+    }
+
+    /* ---- SIDEBAR ---- */
+    .cv-sidebar {
+      background: #f0f4f9;
+      border-right: 1px solid #d0dae8;
+      padding: 24px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+    }
+
+    /* ---- MAIN ---- */
+    .cv-main {
+      padding: 24px 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+    }
+
+    /* ---- SECTION TITLE ---- */
+    .sec-title {
+      font-size: 8pt;
+      font-weight: 700;
+      color: #1e4080;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      border-bottom: 2px solid #2563eb;
+      padding-bottom: 4px;
+      margin-bottom: 12px;
+    }
+
+    /* ---- ABOUT ---- */
+    .about-text { font-size: 8.5pt; color: #444; line-height: 1.7; }
+
+    /* ---- INFO LIST ---- */
+    .info-list { display: flex; flex-direction: column; gap: 8px; }
+    .info-row { display: flex; flex-direction: column; gap: 1px; }
+    .info-lbl { font-size: 7pt; color: #888; text-transform: uppercase; letter-spacing: 0.8px; font-weight: 600; }
+    .info-val { font-size: 8.5pt; color: #1a1a2e; font-weight: 500; }
+    .info-val.green { color: #16a34a; font-weight: 700; }
+
+    /* ---- SKILLS LIST ---- */
+    .skills-list { display: flex; flex-direction: column; gap: 7px; }
+    .skill-row { }
+    .skill-top { display: flex; justify-content: space-between; font-size: 8pt; font-weight: 600; color: #2d2d2d; margin-bottom: 3px; }
+    .skill-pct { color: #2563eb; }
+    .skill-bar { height: 4px; background: #d0dae8; border-radius: 2px; }
+    .skill-fill { height: 100%; background: linear-gradient(90deg, #1e4080, #2563eb); border-radius: 2px; }
+
+    /* ---- TOOLS GRID ---- */
+    .tools-grid { display: flex; flex-wrap: wrap; gap: 5px; }
+    .tool-pill {
+      font-size: 7.5pt; font-weight: 600;
+      padding: 3px 9px;
+      background: rgba(37,99,235,0.07);
+      border: 1px solid rgba(37,99,235,0.22);
+      border-radius: 50px;
+      color: #1e4080;
+    }
+
+    /* ---- LANGUAGES ---- */
+    .lang-list { display: flex; flex-direction: column; gap: 5px; }
+    .lang-item { display: flex; align-items: center; gap: 5px; font-size: 8.5pt; color: #333; font-weight: 500; }
+    .lang-dot { width: 6px; height: 6px; border-radius: 50%; background: #2563eb; flex-shrink: 0; }
+
+    /* ---- EDUCATION ---- */
+    .edu-list { display: flex; flex-direction: column; gap: 10px; }
+    .edu-item { }
+    .edu-degree { font-size: 8.5pt; font-weight: 700; color: #1a1a2e; }
+    .edu-school { font-size: 8pt; color: #555; }
+    .edu-year { font-size: 7.5pt; color: #2563eb; font-weight: 600; margin-top: 1px; }
+
+    /* ---- EXPERIENCE ---- */
+    .exp-list { display: flex; flex-direction: column; gap: 16px; }
+    .exp-item { border-left: 3px solid #2563eb; padding-left: 12px; position: relative; }
+    .exp-dot {
+      width: 8px; height: 8px; border-radius: 50%;
+      background: #2563eb; position: absolute;
+      left: -5.5px; top: 4px;
+      box-shadow: 0 0 0 2px #fff;
+    }
+    .exp-company { font-size: 7.5pt; color: #2563eb; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; }
+    .exp-role { font-size: 9.5pt; font-weight: 800; color: #1a1a2e; margin: 2px 0; }
+    .exp-period { font-size: 7.5pt; color: #888; font-weight: 500; margin-bottom: 5px; }
+    .exp-desc { font-size: 8pt; color: #555; line-height: 1.6; margin-bottom: 6px; }
+    .exp-tags { display: flex; flex-wrap: wrap; gap: 4px; }
+    .exp-tag {
+      font-size: 7pt; font-weight: 600; padding: 2px 7px;
+      background: rgba(37,99,235,0.07);
+      border: 1px solid rgba(37,99,235,0.2);
+      border-radius: 50px; color: #1e4080;
+    }
+
+    /* ---- ACHIEVEMENTS ---- */
+    .ach-list { display: flex; flex-direction: column; gap: 8px; }
+    .ach-item { display: flex; gap: 8px; align-items: flex-start; }
+    .ach-icon { color: #2563eb; font-size: 8pt; margin-top: 2px; flex-shrink: 0; }
+    .ach-text { font-size: 8pt; color: #444; line-height: 1.5; }
+    .ach-text strong { color: #1a1a2e; }
+
+    /* ---- REFERENCE ---- */
+    .ref-list { display: flex; flex-direction: column; gap: 12px; }
+    .ref-item { background: #f0f4f9; border: 1px solid #d0dae8; border-radius: 6px; padding: 10px 12px; border-left: 3px solid #2563eb; }
+    .ref-name { font-size: 9pt; font-weight: 700; color: #1a1a2e; }
+    .ref-role { font-size: 7.5pt; color: #2563eb; font-weight: 600; margin-bottom: 4px; }
+    .ref-contact { font-size: 8pt; color: #555; display: flex; flex-direction: column; gap: 2px; }
+
+    /* ---- FOOTER ---- */
+    .cv-footer {
+      border-top: 1px solid #d0dae8;
+      padding: 10px 36px;
+      text-align: center;
+      font-size: 7.5pt;
+      color: #aaa;
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .cv-footer span { color: #1e4080; font-weight: 600; }
+
+    /* ---- PRINT BUTTON (screen only) ---- */
+    .print-bar {
+      width: 210mm; margin: 0 auto 12px;
+      display: flex; gap: 12px; justify-content: flex-end; align-items: center;
+    }
+    .btn-print, .btn-back {
+      padding: 10px 22px; border-radius: 50px;
+      font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 600;
+      cursor: pointer; border: none; transition: all 0.3s;
+    }
+    .btn-print {
+      background: linear-gradient(135deg, #0f2952, #2563eb);
+      color: #fff; box-shadow: 0 4px 16px rgba(37,99,235,0.35);
+    }
+    .btn-print:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(37,99,235,0.5); }
+    .btn-back {
+      background: #f0f4f9; color: #1e4080;
+      border: 1.5px solid rgba(30,64,128,0.25);
+    }
+    .btn-back:hover { background: rgba(37,99,235,0.08); }
+
+    /* ---- PRINT STYLES ---- */
+    @media print {
+      body { background: #fff; }
+      .print-bar { display: none; }
+      .cv-page { margin: 0; box-shadow: none; width: 100%; }
+      @page { size: A4; margin: 0; }
+    }
+
+    @media (max-width: 700px) {
+      .cv-page { width: 100%; margin: 0; }
+      .print-bar { width: 100%; padding: 12px; }
+      .cv-body { grid-template-columns: 1fr; }
+      .cv-header { flex-direction: column; gap: 14px; }
+      .cv-badge { align-self: flex-start; }
+      .cv-sidebar { border-right: none; border-bottom: 1px solid #e4e0f8; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Print / Back Bar -->
+  <div class="print-bar">
+    <button class="btn-back" onclick="window.history.back()">&#8592; Back to Portfolio</button>
+    <button class="btn-print" onclick="window.print()">&#128438; Download / Print PDF</button>
+  </div>
+
+  <div class="cv-page">
+
+    <!-- HEADER -->
+    <div class="cv-header">
+      <div class="cv-header-text">
+        <div class="cv-name">M. Kirubagaran</div>
+        <div class="cv-role">Fleet &amp; Transport Operations Incharge &nbsp;|&nbsp; Fuel &amp; GPS In-Charge</div>
+        <div class="cv-contacts">
+          <span data-icon="📧">&nbsp;djshan23@live.com</span>
+          <span data-icon="📞">&nbsp;+974 7734 5346 / +974 7400 5924</span>
+          <span data-icon="📍">&nbsp;Ain Khaled St, Doha, Qatar</span>
+          <span data-icon="🔗">&nbsp;linkedin.com/in/kirubagaran-shan-645499b9</span>
+          <span data-icon="🪪">&nbsp;Qatar ID: Residential Visa &nbsp;|&nbsp; Qatar Driving Licence: 29014405759</span>
+        </div>
+      </div>
+      <div class="cv-badge">
+        <div class="cv-badge-num">15+</div>
+        <div class="cv-badge-label">Years in Qatar</div>
+      </div>
+    </div>
+
+    <!-- BODY -->
+    <div class="cv-body">
+
+      <!-- SIDEBAR -->
+      <div class="cv-sidebar">
+
+        <!-- Personal Info -->
+        <div>
+          <div class="sec-title">Personal Info</div>
+          <div class="info-list">
+            <div class="info-row">
+              <span class="info-lbl">Date of Birth</span>
+              <span class="info-val">20 April 1990</span>
+            </div>
+            <div class="info-row">
+              <span class="info-lbl">Nationality</span>
+              <span class="info-val">Sri Lankan</span>
+            </div>
+            <div class="info-row">
+              <span class="info-lbl">Marital Status</span>
+              <span class="info-val">Married</span>
+            </div>
+            <div class="info-row">
+              <span class="info-lbl">Visa Status</span>
+              <span class="info-val">Residential (Qatar)</span>
+            </div>
+            <div class="info-row">
+              <span class="info-lbl">Availability</span>
+              <span class="info-val green">Immediate Joiner</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Core Skills -->
+        <div>
+          <div class="sec-title">Core Skills</div>
+          <div class="skills-list">
+            <div class="skill-row">
+              <div class="skill-top"><span>Fuel &amp; Fleet Management</span><span class="skill-pct">95%</span></div>
+              <div class="skill-bar"><div class="skill-fill" style="width:95%"></div></div>
+            </div>
+            <div class="skill-row">
+              <div class="skill-top"><span>GPS Tracking Systems</span><span class="skill-pct">90%</span></div>
+              <div class="skill-bar"><div class="skill-fill" style="width:90%"></div></div>
+            </div>
+            <div class="skill-row">
+              <div class="skill-top"><span>Route Planning &amp; Dispatch</span><span class="skill-pct">92%</span></div>
+              <div class="skill-bar"><div class="skill-fill" style="width:92%"></div></div>
+            </div>
+            <div class="skill-row">
+              <div class="skill-top"><span>Driver Supervision</span><span class="skill-pct">95%</span></div>
+              <div class="skill-bar"><div class="skill-fill" style="width:95%"></div></div>
+            </div>
+            <div class="skill-row">
+              <div class="skill-top"><span>Preventive Maintenance</span><span class="skill-pct">88%</span></div>
+              <div class="skill-bar"><div class="skill-fill" style="width:88%"></div></div>
+            </div>
+            <div class="skill-row">
+              <div class="skill-top"><span>QHSE &amp; Safety Compliance</span><span class="skill-pct">90%</span></div>
+              <div class="skill-bar"><div class="skill-fill" style="width:90%"></div></div>
+            </div>
+            <div class="skill-row">
+              <div class="skill-top"><span>Document Control</span><span class="skill-pct">88%</span></div>
+              <div class="skill-bar"><div class="skill-fill" style="width:88%"></div></div>
+            </div>
+            <div class="skill-row">
+              <div class="skill-top"><span>MS Office Suite</span><span class="skill-pct">85%</span></div>
+              <div class="skill-bar"><div class="skill-fill" style="width:85%"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tools -->
+        <div>
+          <div class="sec-title">Tools &amp; Systems</div>
+          <div class="tools-grid">
+            <span class="tool-pill">GPS Systems</span>
+            <span class="tool-pill">Fuel Ops</span>
+            <span class="tool-pill">Fleet Mgmt</span>
+            <span class="tool-pill">Route Plan</span>
+            <span class="tool-pill">Inventory</span>
+            <span class="tool-pill">Doc Control</span>
+            <span class="tool-pill">SOP Design</span>
+            <span class="tool-pill">KPI Reports</span>
+            <span class="tool-pill">MS Office</span>
+            <span class="tool-pill">Leadership</span>
+          </div>
+        </div>
+
+        <!-- Languages -->
+        <div>
+          <div class="sec-title">Languages</div>
+          <div class="lang-list">
+            <div class="lang-item"><span class="lang-dot"></span>English</div>
+            <div class="lang-item"><span class="lang-dot"></span>Tamil</div>
+            <div class="lang-item"><span class="lang-dot"></span>Sinhala</div>
+            <div class="lang-item"><span class="lang-dot"></span>Hindi</div>
+            <div class="lang-item"><span class="lang-dot"></span>Malayalam</div>
+          </div>
+        </div>
+
+        <!-- Education -->
+        <div>
+          <div class="sec-title">Education</div>
+          <div class="edu-list">
+            <div class="edu-item">
+              <div class="edu-degree">G.C.E Advanced Level</div>
+              <div class="edu-school">St. John Bosco's College, Hatton</div>
+              <div class="edu-year">2009</div>
+            </div>
+            <div class="edu-item">
+              <div class="edu-degree">G.C.E Ordinary Level</div>
+              <div class="edu-school">N. Kotagala National College</div>
+              <div class="edu-year">2006</div>
+            </div>
+            <div class="edu-item">
+              <div class="edu-degree">Computer IT &amp; Hardware</div>
+              <div class="edu-school">E-Soft Institute</div>
+              <div class="edu-year">Jan – May 2007</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- MAIN -->
+      <div class="cv-main">
+
+        <!-- Profile -->
+        <div>
+          <div class="sec-title">Professional Profile</div>
+          <p class="about-text">Results-driven Fleet &amp; Transport Operations Incharge with 15 years of progressive experience in Qatar, specializing in fuel operations, GPS fleet tracking, preventive maintenance planning, and leading a workforce of 150+ drivers across a 200+ vehicle &amp; equipment fleet. Currently serving as Fuel &amp; GPS In-Charge at Beton W.L.L, Doha. Expertise spans fuel consumption analysis, KPI reporting, route optimisation, QHSE safety compliance, and cross-functional logistics documentation. Holds a valid Qatar ID (Residential visa) and Qatar driving licence — ready to join immediately.</p>
+        </div>
+
+        <!-- Experience -->
+        <div>
+          <div class="sec-title">Work Experience</div>
+          <div class="exp-list">
+
+            <div class="exp-item">
+              <div class="exp-dot"></div>
+              <div class="exp-company">Beton W.L.L — Doha, Qatar</div>
+              <div class="exp-role">Fuel &amp; GPS In-Charge / Transport &amp; Fleet Operations Incharge</div>
+              <div class="exp-period">Aug 2019 – Present</div>
+              <div class="exp-desc">Oversaw all fueling operations and daily vehicle dispatch for a fleet of 200+ heavy and light vehicles &amp; equipment across multiple active project sites. Managed GPS tracking systems for real-time fleet monitoring, route efficiency, and vehicle utilisation reporting. Investigated fuel variances and pilferage cases; designed and enforced SOPs that cut fuel wastage by 10%. Planned preventive maintenance schedules; built KPI dashboards and fleet performance reports for senior management. Conducted driver inductions, safety briefings, and performance evaluations for 150+ personnel. Ensured full QHSE compliance.</div>
+              <div class="exp-tags">
+                <span class="exp-tag">Fuel Operations</span>
+                <span class="exp-tag">GPS Tracking</span>
+                <span class="exp-tag">Fleet Management</span>
+                <span class="exp-tag">KPI Reporting</span>
+                <span class="exp-tag">QHSE Compliance</span>
+                <span class="exp-tag">SOP Design</span>
+              </div>
+            </div>
+
+            <div class="exp-item">
+              <div class="exp-dot"></div>
+              <div class="exp-company">Beton W.L.L — Doha, Qatar</div>
+              <div class="exp-role">Site Administrator</div>
+              <div class="exp-period">Oct 2017 – Aug 2019</div>
+              <div class="exp-desc">Managed all site documentation, delivery bookings, and equipment logs across multiple concurrent project sites. Coordinated daily vehicle dispatch schedules, manpower planning, and resource allocation. Prepared overtime calculations, monthly incentive reports, and subcontractor work orders. Liaised between site management, procurement, and warehouse teams to streamline material flow and logistics.</div>
+              <div class="exp-tags">
+                <span class="exp-tag">Site Administration</span>
+                <span class="exp-tag">Dispatch Scheduling</span>
+                <span class="exp-tag">Manpower Planning</span>
+                <span class="exp-tag">Reporting</span>
+              </div>
+            </div>
+
+            <div class="exp-item">
+              <div class="exp-dot"></div>
+              <div class="exp-company">Lotus Trading &amp; Contracting Company — Doha, Qatar</div>
+              <div class="exp-role">Document Controller / Data Entry</div>
+              <div class="exp-period">Jan 2015 – May 2017</div>
+              <div class="exp-desc">Established and maintained a fully compliant document control system aligned with ISO documentation standards. Handled transmittals, scanning, indexing, and secure archiving of all engineering and project documents. Supported internal and external audit preparation and corrective action close-out.</div>
+              <div class="exp-tags">
+                <span class="exp-tag">Document Control</span>
+                <span class="exp-tag">ISO Compliance</span>
+                <span class="exp-tag">Audit Support</span>
+              </div>
+            </div>
+
+            <div class="exp-item">
+              <div class="exp-dot"></div>
+              <div class="exp-company">Lotus Trading &amp; Contracting Company — Doha, Qatar</div>
+              <div class="exp-role">Workshop Store In-Charge</div>
+              <div class="exp-period">May 2012 – Jan 2015</div>
+              <div class="exp-desc">Maintained accurate stock records and inventory databases for all workshop spare parts. Received, inspected, and verified incoming materials; issued materials per approved requisitions; monitored minimum stock levels and raised timely purchase requests. Coordinated with workshop supervisors and procurement for scheduled and breakdown maintenance support.</div>
+              <div class="exp-tags">
+                <span class="exp-tag">Inventory Management</span>
+                <span class="exp-tag">Storekeeping</span>
+                <span class="exp-tag">Workshop Coordination</span>
+                <span class="exp-tag">Procurement</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Key Achievements -->
+        <div>
+          <div class="sec-title">Key Achievements</div>
+          <div class="ach-list">
+            <div class="ach-item">
+              <span class="ach-icon">▸</span>
+              <span class="ach-text"><strong>Reduced fuel loss by 10%</strong> — designed and implemented internal fuel tracking SOPs at Beton W.L.L across a 200+ vehicle fleet.</span>
+            </div>
+            <div class="ach-item">
+              <span class="ach-icon">▸</span>
+              <span class="ach-text"><strong>Built centralised fuel analysis system</strong> — monthly consumption reporting improving cost accuracy and management accountability across all project sites.</span>
+            </div>
+            <div class="ach-item">
+              <span class="ach-icon">▸</span>
+              <span class="ach-text"><strong>GPS fleet monitoring</strong> — managed real-time tracking, fuel movement, and route efficiency for 200+ heavy and light vehicles.</span>
+            </div>
+            <div class="ach-item">
+              <span class="ach-icon">▸</span>
+              <span class="ach-text"><strong>FIFA World Cup 2022 Volunteer</strong> and <strong>FIFA Arab Cup 2021 Volunteer</strong> — Qatar. Football Team Captain, Asian Football Academy, Doha.</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- References -->
+        <div>
+          <div class="sec-title">Professional References</div>
+          <div class="ref-list">
+            <div class="ref-item">
+              <div class="ref-name">Mr. Naidu Kummarasetty</div>
+              <div class="ref-role">Beton W.L.L, Doha, Qatar</div>
+              <div class="ref-contact">
+                <span>📞 +974 7766 0725</span>
+                <span>✉ naidu_kummarasetty@Betonqatar.com</span>
+              </div>
+            </div>
+            <div class="ref-item">
+              <div class="ref-name">Mr. Jeemon Jacob</div>
+              <div class="ref-role">IT Head — Beton W.L.L, Doha, Qatar</div>
+              <div class="ref-contact">
+                <span>📞 +974 3147 9922</span>
+                <span>✉ geemon_jacob@Betonqatar.com</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="cv-footer">
+      <span>M. Kirubagaran</span>
+      <span>djshan23@live.com &nbsp;|&nbsp; +974 7734 5346 &nbsp;|&nbsp; Doha, Qatar</span>
+      <span>kirubaharan-shan.web.app</span>
+    </div>
+
+  </div>
+
+</body>
+</html>
