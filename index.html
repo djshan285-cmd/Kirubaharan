@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>M. Kirubagaran | Fleet & Transport Operations Incharge</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ========== CURSOR ========== -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <!-- ========== LOADER ========== -->
+  <div class="loader" id="loader">
+    <div class="loader-inner">
+      <div class="loader-logo">K<span>.</span></div>
+      <div class="loader-bar"><div class="loader-progress"></div></div>
+    </div>
+  </div>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">K<span>.</span></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Achievements</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#reference" class="nav-link">Reference</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <i class="fas fa-moon" id="themeIcon"></i>
+        </button>
+        <a href="#contact" class="btn-hire">Hire Me</a>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ========== HERO ========== -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+      <div class="orb orb-3"></div>
+      <div class="grid-overlay"></div>
+      <div class="particles" id="particles"></div>
+    </div>
+    <div class="hero-container">
+      <div class="hero-content" data-reveal>
+        <div class="hero-badge">
+          <span class="badge-dot"></span>
+          Available for work
+        </div>
+        <h1 class="hero-title">
+          Hi, I'm <span class="gradient-text">Kirubagaran</span>
+        </h1>
+        <div class="hero-role">
+          <span class="role-prefix">I'm a </span>
+          <span class="typing-text" id="typingText"></span>
+          <span class="cursor-blink">|</span>
+        </div>
+        <p class="hero-desc">
+          Results-driven Fleet &amp; Transport Operations Incharge with 14 years of progressive experience in Qatar. Expert in fuel operations, GPS fleet tracking, SOP design, and leading 100+ drivers across 150+ vehicle fleets. Valid Qatar ID &amp; driving license — immediate joiner.
+        </p>
+        <div class="hero-cta">
+          <a href="#experience" class="btn-primary">
+            <span>View Experience</span>
+            <i class="fas fa-arrow-right"></i>
+          </a>
+          <a href="#contact" class="btn-secondary">
+            <span>Contact Me</span>
+          </a>
+        </div>
+        <div class="hero-socials">
+          <a href="https://www.linkedin.com/in/kirubagaran-shan-645499b9/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://www.instagram.com/shan_dk/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.behance.net/shandk" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Behance"><i class="fab fa-behance"></i></a>
+          <a href="https://www.facebook.com/dk.shan.3" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat">
+            <span class="stat-num" data-count="100">0</span><span>+</span>
+            <span class="stat-label">Drivers Supervised</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <span class="stat-num" data-count="150">0</span><span>+</span>
+            <span class="stat-label">Fleet Vehicles</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <span class="stat-num" data-count="10">0</span><span>+</span>
+            <span class="stat-label">Years in Qatar</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual" data-reveal>
+        <div class="profile-ring">
+          <div class="ring ring-1"></div>
+          <div class="ring ring-2"></div>
+          <div class="ring ring-3"></div>
+          <div class="profile-img-wrap">
+            <!-- =============================================
+                 YOUR PHOTO (HERO)
+                 Replace the div below with:
+                 <img src="photo.jpg" alt="M. Kirubagaran" />
+                 Put your photo file (e.g. photo.jpg) in the
+                 same folder as index.html
+            ============================================= -->
+            <img src="photo.jpg" alt="M. Kirubagaran" />
+          </div>
+          <div class="floating-card card-html">
+            <i class="fas fa-gas-pump"></i> Fuel Ops
+          </div>
+          <div class="floating-card card-css">
+            <i class="fas fa-satellite-dish"></i> GPS
+          </div>
+          <div class="floating-card card-js">
+            <i class="fas fa-truck"></i> Fleet
+          </div>
+          <div class="floating-card card-react">
+            <i class="fas fa-route"></i> Logistics
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <div class="scroll-mouse">
+        <div class="scroll-wheel"></div>
+      </div>
+      <span>Scroll Down</span>
+    </div>
+  </section>
+
+  <!-- ========== ABOUT ========== -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="section-header" data-reveal>
+        <span class="section-tag">Who I Am</span>
+        <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+        <p class="section-subtitle">A dedicated logistics professional with a decade of excellence in Qatar</p>
+      </div>
+      <div class="about-grid">
+        <div class="about-img-wrap" data-reveal>
+          <div class="about-img-card glass-card">
+            <!-- =============================================
+                 YOUR PHOTO (ABOUT SECTION)
+                 Replace the div below with:
+                 <img src="photo.jpg" alt="M. Kirubagaran" />
+                 Put your photo file in the same folder.
+            ============================================= -->
+            <img src="photo.jpg" alt="M. Kirubagaran" />
+          </div>
+          <div class="about-badge-card">
+            <div class="about-badge">
+              <i class="fas fa-id-card"></i>
+              <span>Valid Qatar ID &amp; License</span>
+            </div>
+          </div>
+          <div class="about-exp-badge">
+            <span class="exp-num">10+</span>
+            <span class="exp-label">Years in<br/>Qatar</span>
+          </div>
+          <div class="about-decoration">
+            <div class="deco-circle"></div>
+            <div class="deco-dots"></div>
+          </div>
+        </div>
+        <div class="about-content" data-reveal>
+          <div class="about-greeting">Hello There! 👋</div>
+          <h3 class="about-name">I'm <span class="gradient-text">Kirubagaran</span>, Fleet &amp; Transport Operations Incharge</h3>
+          <p class="about-text">
+            I'm a results-driven Fleet &amp; Transport Operations Incharge with 14 years of progressive experience in Qatar, specializing in fuel operations, GPS fleet tracking, preventive maintenance planning, and leading a workforce of 100+ drivers across a 150+ vehicle fleet. Currently serving as Fuel &amp; GPS In-Charge at Beton W.L.L, Doha.
+          </p>
+          <p class="about-text" id="aboutExtra" style="display:none;">
+            My expertise spans fuel consumption analysis, KPI reporting to senior management, route optimisation, preventive maintenance scheduling, QHSE safety compliance, and cross-functional logistics documentation. I have deep experience in storekeeping, workshop coordination, site administration, and document control across multiple major project sites in Qatar. I hold a valid Qatar ID (Residential visa) and Qatar driving licence — ready to join immediately. Outside of work, I enjoy photography, design, and sports — having proudly served as a FIFA World Cup 2022 Volunteer, FIFA Arab Cup 2021 Volunteer, and Football Team Captain at Asian Football Academy, Doha.
+          </p>
+          <div class="about-info-grid">
+            <div class="info-item">
+              <span class="info-label">Full Name</span>
+              <span class="info-value">M. Kirubagaran</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Date of Birth</span>
+              <span class="info-value">20 Apr 1990</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Nationality</span>
+              <span class="info-value">Sri Lankan</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Marital Status</span>
+              <span class="info-value">Married</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Visa Status</span>
+              <span class="info-value">Residential (Qatar)</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Location</span>
+              <span class="info-value">Ain Khaled St, Doha</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Email</span>
+              <span class="info-value">djshan23@live.com</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Availability</span>
+              <span class="info-value available"><span class="dot"></span>Immediate Joiner</span>
+            </div>
+          </div>
+          <div class="about-actions">
+            <button class="btn-read-more" id="readMoreBtn">
+              <span>Read More</span>
+              <i class="fas fa-chevron-down"></i>
+            </button>
+            <a href="#" class="btn-primary download-cv">
+              <i class="fas fa-download"></i>
+              <span>Download CV</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SKILLS ========== -->
+  <section class="skills" id="skills">
+    <div class="container">
+      <div class="section-header" data-reveal>
+        <span class="section-tag">What I Know</span>
+        <h2 class="section-title">My <span class="gradient-text">Skills</span></h2>
+        <p class="section-subtitle">Core competencies built over a decade of hands-on transport &amp; logistics management</p>
+      </div>
+      <div class="skills-layout">
+        <div class="skills-bars" data-reveal>
+          <h3 class="skills-subtitle">Technical Proficiency</h3>
+          <div class="skill-item">
+            <div class="skill-info">
+              <div class="skill-name"><i class="fas fa-gas-pump html-icon"></i> Fuel &amp; Fleet Management</div>
+              <span class="skill-percent">95%</span>
+            </div>
+            <div class="skill-bar"><div class="skill-fill" data-width="95"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info">
+              <div class="skill-name"><i class="fas fa-satellite-dish css-icon"></i> GPS Tracking Systems</div>
+              <span class="skill-percent">90%</span>
+            </div>
+            <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info">
+              <div class="skill-name"><i class="fas fa-route js-icon"></i> Route Planning &amp; Dispatch</div>
+              <span class="skill-percent">92%</span>
+            </div>
+            <div class="skill-bar"><div class="skill-fill" data-width="92"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info">
+              <div class="skill-name"><i class="fas fa-users react-icon"></i> Driver Supervision</div>
+              <span class="skill-percent">95%</span>
+            </div>
+            <div class="skill-bar"><div class="skill-fill" data-width="95"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info">
+              <div class="skill-name"><i class="fas fa-folder-open ui-icon"></i> Document Control</div>
+              <span class="skill-percent">88%</span>
+            </div>
+            <div class="skill-bar"><div class="skill-fill" data-width="88"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info">
+              <div class="skill-name"><i class="fas fa-table-cells node-icon"></i> MS Office Suite</div>
+              <span class="skill-percent">85%</span>
+            </div>
+            <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info">
+              <div class="skill-name"><i class="fas fa-wrench ui-icon"></i> Preventive Maintenance Planning</div>
+              <span class="skill-percent">88%</span>
+            </div>
+            <div class="skill-bar"><div class="skill-fill" data-width="88"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info">
+              <div class="skill-name"><i class="fas fa-shield-halved react-icon"></i> QHSE &amp; Safety Compliance</div>
+              <span class="skill-percent">90%</span>
+            </div>
+            <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+          </div>
+        </div>
+        <div class="skills-tools" data-reveal>
+          <h3 class="skills-subtitle">Tools & Technologies</h3>
+          <div class="tools-grid">
+            <div class="tool-card glass-card">
+              <div class="tool-icon html-icon"><i class="fas fa-gas-pump"></i></div>
+              <span>Fuel Ops</span>
+            </div>
+            <div class="tool-card glass-card">
+              <div class="tool-icon css-icon"><i class="fas fa-satellite-dish"></i></div>
+              <span>GPS Systems</span>
+            </div>
+            <div class="tool-card glass-card">
+              <div class="tool-icon js-icon"><i class="fas fa-truck"></i></div>
+              <span>Fleet Mgmt</span>
+            </div>
+            <div class="tool-card glass-card">
+              <div class="tool-icon react-icon"><i class="fas fa-route"></i></div>
+              <span>Route Plan</span>
+            </div>
+            <div class="tool-card glass-card">
+              <div class="tool-icon node-icon"><i class="fas fa-users"></i></div>
+              <span>Driver Supv</span>
+            </div>
+            <div class="tool-card glass-card">
+              <div class="tool-icon git-icon"><i class="fas fa-boxes-stacked"></i></div>
+              <span>Inventory</span>
+            </div>
+            <div class="tool-card glass-card">
+              <div class="tool-icon figma-icon"><i class="fas fa-folder-open"></i></div>
+              <span>Doc Control</span>
+            </div>
+            <div class="tool-card glass-card">
+              <div class="tool-icon sass-icon"><i class="fas fa-shield-halved"></i></div>
+              <span>Safety</span>
+            </div>
+            <div class="tool-card glass-card">
+              <div class="tool-icon vue-icon"><i class="fas fa-chart-bar"></i></div>
+              <span>Reporting</span>
+            </div>
+            <div class="tool-card glass-card">
+              <div class="tool-icon npm-icon"><i class="fas fa-desktop"></i></div>
+              <span>MS Office</span>
+            </div>
+            <div class="tool-card glass-card">
+              <div class="tool-icon wp-icon"><i class="fas fa-users-gear"></i></div>
+              <span>Leadership</span>
+            </div>
+            <div class="tool-card glass-card">
+              <div class="tool-icon aws-icon"><i class="fas fa-clipboard-list"></i></div>
+              <span>SOP Design</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Languages -->
+      <div class="lang-block" data-reveal style="margin-top:48px;">
+        <h4 class="lang-title"><i class="fas fa-language"></i> Languages</h4>
+        <div class="lang-pills">
+          <span class="lang-pill"><i class="fas fa-check-circle"></i> English</span>
+          <span class="lang-pill"><i class="fas fa-check-circle"></i> Tamil</span>
+          <span class="lang-pill"><i class="fas fa-check-circle"></i> Sinhala</span>
+          <span class="lang-pill"><i class="fas fa-check-circle"></i> Hindi</span>
+          <span class="lang-pill"><i class="fas fa-check-circle"></i> Malayalam</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========== PROJECTS ========== -->
+  <section class="projects" id="projects">
+    <div class="container">
+      <div class="section-header" data-reveal>
+        <span class="section-tag">Achievements</span>
+        <h2 class="section-title">Key <span class="gradient-text">Contributions</span></h2>
+        <p class="section-subtitle">Notable highlights and achievements from over a decade in transport &amp; logistics management</p>
+      </div>
+      <div class="projects-filter" data-reveal>
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="fuel">Fuel &amp; Fleet</button>
+        <button class="filter-btn" data-filter="supervision">Supervision</button>
+        <button class="filter-btn" data-filter="logistics">Logistics</button>
+        <button class="filter-btn" data-filter="volunteer">Volunteering</button>
+      </div>
+      <div class="projects-grid" id="projectsGrid">
+        <div class="project-card glass-card" data-category="fuel" data-reveal>
+          <div class="project-img">
+            <div class="project-img-placeholder gradient-1">
+              <i class="fas fa-gas-pump"></i>
+            </div>
+            <div class="project-overlay">
+              <div class="project-links">
+                <a href="#contact" class="project-link" aria-label="Contact"><i class="fas fa-envelope"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-tags">
+              <span class="tag">Fuel Ops</span>
+              <span class="tag">SOP</span>
+              <span class="tag">Cost Saving</span>
+            </div>
+            <h3 class="project-title">Reduced Fuel Loss by 10%</h3>
+            <p class="project-desc">Designed and implemented internal fuel tracking SOPs at Beton W.L.L, reducing pilferage and wastage by 10% across a 150+ vehicle fleet.</p>
+            <a href="#contact" class="project-cta">Get In Touch <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+        <div class="project-card glass-card featured" data-category="fuel" data-reveal>
+          <div class="project-img">
+            <div class="project-img-placeholder gradient-2">
+              <i class="fas fa-chart-line"></i>
+            </div>
+            <div class="project-overlay">
+              <div class="project-links">
+                <a href="#contact" class="project-link" aria-label="Contact"><i class="fas fa-envelope"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-tags">
+              <span class="tag">Analytics</span>
+              <span class="tag">Reporting</span>
+              <span class="tag">KPI</span>
+            </div>
+            <h3 class="project-title">Monthly Fuel Analysis System</h3>
+            <p class="project-desc">Created a centralized fuel log and monthly consumption reporting system that improved cost accuracy and management accountability across all project sites.</p>
+            <a href="#contact" class="project-cta">Get In Touch <i class="fas fa-arrow-right"></i></a>
+          </div>
+          <div class="featured-badge">Top Achievement</div>
+        </div>
+        <div class="project-card glass-card" data-category="supervision" data-reveal>
+          <div class="project-img">
+            <div class="project-img-placeholder gradient-3">
+              <i class="fas fa-satellite-dish"></i>
+            </div>
+            <div class="project-overlay">
+              <div class="project-links">
+                <a href="#contact" class="project-link" aria-label="Contact"><i class="fas fa-envelope"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-tags">
+              <span class="tag">GPS Tracking</span>
+              <span class="tag">Fleet</span>
+              <span class="tag">150+ Vehicles</span>
+            </div>
+            <h3 class="project-title">GPS Fleet Monitoring</h3>
+            <p class="project-desc">Managed GPS tracking systems to monitor real-time vehicle locations, fuel movement, and route efficiency for a fleet of 150+ heavy and light vehicles.</p>
+            <a href="#contact" class="project-cta">Get In Touch <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+        <div class="project-card glass-card" data-category="supervision" data-reveal>
+          <div class="project-img">
+            <div class="project-img-placeholder gradient-4">
+              <i class="fas fa-users"></i>
+            </div>
+            <div class="project-overlay">
+              <div class="project-links">
+                <a href="#contact" class="project-link" aria-label="Contact"><i class="fas fa-envelope"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-tags">
+              <span class="tag">100+ Drivers</span>
+              <span class="tag">Training</span>
+              <span class="tag">Safety</span>
+            </div>
+            <h3 class="project-title">Driver Supervision &amp; Training</h3>
+            <p class="project-desc">Supervised, trained, and motivated a workforce of 100+ drivers. Directed daily dispatch, shift scheduling, and transport safety compliance across all fleets.</p>
+            <a href="#contact" class="project-cta">Get In Touch <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+        <div class="project-card glass-card" data-category="logistics" data-reveal>
+          <div class="project-img">
+            <div class="project-img-placeholder gradient-5">
+              <i class="fas fa-folder-open"></i>
+            </div>
+            <div class="project-overlay">
+              <div class="project-links">
+                <a href="#contact" class="project-link" aria-label="Contact"><i class="fas fa-envelope"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-tags">
+              <span class="tag">Doc Control</span>
+              <span class="tag">Compliance</span>
+              <span class="tag">Audit</span>
+            </div>
+            <h3 class="project-title">Document Control System</h3>
+            <p class="project-desc">Established a comprehensive document control system across multiple projects — managing transmittals, invoices, weekly reports, audits, and quality plans.</p>
+            <a href="#contact" class="project-cta">Get In Touch <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+        <div class="project-card glass-card" data-category="volunteer" data-reveal>
+          <div class="project-img">
+            <div class="project-img-placeholder gradient-6">
+              <i class="fas fa-futbol"></i>
+            </div>
+            <div class="project-overlay">
+              <div class="project-links">
+                <a href="#contact" class="project-link" aria-label="Contact"><i class="fas fa-envelope"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-tags">
+              <span class="tag">FIFA 2022</span>
+              <span class="tag">Volunteer</span>
+              <span class="tag">Qatar</span>
+            </div>
+            <h3 class="project-title">FIFA World Cup 2022 Volunteer</h3>
+            <p class="project-desc">Proudly served as official FIFA World Cup 2022 Volunteer and FIFA Arab Cup 2021 Volunteer in Qatar. Also served as Football Team Captain at Asian Football Academy, Doha.</p>
+            <a href="#contact" class="project-cta">Get In Touch <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="projects-more" data-reveal>
+        <a href="mailto:djshan23@live.com" class="btn-secondary">
+          Download Full CV <i class="fas fa-download"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== EXPERIENCE ========== -->
+  <section class="experience" id="experience">
+    <div class="container">
+      <div class="section-header" data-reveal>
+        <span class="section-tag">My Journey</span>
+        <h2 class="section-title">Work <span class="gradient-text">Experience</span></h2>
+        <p class="section-subtitle">Over a decade of progressive growth in transport &amp; logistics management across Qatar</p>
+      </div>
+      <div class="timeline-wrapper" data-reveal>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card glass-card">
+              <div class="timeline-year">Aug 2019 – Present</div>
+              <div class="timeline-content">
+                <span class="timeline-company">Beton W.L.L — Doha, Qatar</span>
+                <h3 class="timeline-role">Fuel &amp; GPS In-Charge <span style="font-size:13px;font-weight:500;color:var(--purple-neon);">— Transport &amp; Fleet Operations Incharge</span></h3>
+                <p class="timeline-desc">Oversaw all fueling operations and daily vehicle dispatch for a fleet of 150+ heavy and light vehicles across multiple active project sites. Managed GPS tracking systems for real-time fleet monitoring, route efficiency, and vehicle utilisation reporting. Investigated fuel variances and pilferage cases; designed and enforced SOPs that cut fuel wastage by 10%, delivering measurable cost savings. Planned and coordinated preventive maintenance schedules to maximise fleet uptime. Built and submitted KPI dashboards and fleet performance reports to senior management. Conducted driver inductions, safety briefings, and performance evaluations for 100+ personnel. Ensured full QHSE compliance across all transport operations.</p>
+                <div class="timeline-tags">
+                  <span class="tag">Fuel Operations</span>
+                  <span class="tag">GPS Tracking</span>
+                  <span class="tag">Fleet Management</span>
+                  <span class="tag">KPI Reporting</span>
+                  <span class="tag">QHSE Compliance</span>
+                  <span class="tag">SOP Design</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card glass-card">
+              <div class="timeline-year">Oct 2017 – Aug 2019</div>
+              <div class="timeline-content">
+                <span class="timeline-company">Beton W.L.L — Doha, Qatar</span>
+                <h3 class="timeline-role">Site Administrator</h3>
+                <p class="timeline-desc">Managed all site documentation, delivery bookings, and equipment logs across multiple concurrent project sites. Coordinated daily vehicle dispatch schedules, manpower planning, and resource allocation to ensure uninterrupted site operations. Prepared overtime calculations, monthly incentive reports, and subcontractor work orders. Liaised between site management, procurement, and warehouse teams to streamline material flow and logistics. Supported project managers with operational reporting, meeting minutes, and site correspondence.</p>
+                <div class="timeline-tags">
+                  <span class="tag">Site Administration</span>
+                  <span class="tag">Dispatch Scheduling</span>
+                  <span class="tag">Manpower Planning</span>
+                  <span class="tag">Procurement Liaison</span>
+                  <span class="tag">Reporting</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card glass-card">
+              <div class="timeline-year">Jan 2015 – May 2017</div>
+              <div class="timeline-content">
+                <span class="timeline-company">Lotus Trading &amp; Contracting Company — Doha, Qatar</span>
+                <h3 class="timeline-role">Document Controller / Data Entry</h3>
+                <p class="timeline-desc">Established and maintained a fully compliant document control system aligned with approved project quality plans and ISO documentation standards. Handled scanning, indexing, and secure archiving of all engineering and project documents. Controlled and tracked all incoming and outgoing transmittals, ensuring timely distribution to relevant stakeholders. Prepared detailed weekly and monthly progress reports for project management review. Actively supported internal and external audit preparation, participation, and corrective action close-out. Maintained data entry accuracy across all project databases.</p>
+                <div class="timeline-tags">
+                  <span class="tag">Document Control</span>
+                  <span class="tag">ISO Compliance</span>
+                  <span class="tag">Audit Support</span>
+                  <span class="tag">Transmittal Control</span>
+                  <span class="tag">Data Entry</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card glass-card">
+              <div class="timeline-year">May 2012 – Jan 2015</div>
+              <div class="timeline-content">
+                <span class="timeline-company">Lotus Trading &amp; Contracting Company — Doha, Qatar</span>
+                <h3 class="timeline-role">Workshop Store In-Charge</h3>
+                <p class="timeline-desc">Maintained accurate stock records, bin cards, and inventory databases for all workshop spare parts and consumables. Received, inspected, and verified incoming materials and parts against purchase orders and delivery notes. Issued materials per approved material requisitions and tracked consumption patterns to identify usage trends. Monitored minimum stock levels and raised timely purchase requests to prevent operational delays. Coordinated closely with workshop supervisors, procurement, and suppliers to ensure parts availability for scheduled and breakdown maintenance. Prepared daily and weekly store reports; assisted in annual stock-taking and inventory reconciliation exercises.</p>
+                <div class="timeline-tags">
+                  <span class="tag">Inventory Management</span>
+                  <span class="tag">Storekeeping</span>
+                  <span class="tag">Workshop Coordination</span>
+                  <span class="tag">Procurement</span>
+                  <span class="tag">Stock Control</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== EDUCATION ========== -->
+  <section class="education" id="reference">
+    <div class="container">
+      <div class="section-header" data-reveal>
+        <span class="section-tag">Qualifications</span>
+        <h2 class="section-title">Education &amp; <span class="gradient-text">Training</span></h2>
+        <p class="section-subtitle">Academic background and professional certifications</p>
+      </div>
+
+      <div class="edu-grid" data-reveal>
+        <div class="edu-card glass-card">
+          <div class="edu-icon"><i class="fas fa-graduation-cap"></i></div>
+          <div class="edu-info">
+            <span class="edu-year">2009</span>
+            <h4 class="edu-degree">G.C.E Advanced Level</h4>
+            <span class="edu-school">St. John Bosco's College, Hatton</span>
+          </div>
+        </div>
+        <div class="edu-card glass-card">
+          <div class="edu-icon"><i class="fas fa-school"></i></div>
+          <div class="edu-info">
+            <span class="edu-year">2006</span>
+            <h4 class="edu-degree">G.C.E Ordinary Level</h4>
+            <span class="edu-school">N. Kotagala National College, Kotagala</span>
+          </div>
+        </div>
+        <div class="edu-card glass-card">
+          <div class="edu-icon"><i class="fas fa-laptop-code"></i></div>
+          <div class="edu-info">
+            <span class="edu-year">Jan – May 2007</span>
+            <h4 class="edu-degree">Computer IT &amp; Hardware Course</h4>
+            <span class="edu-school">E-Soft Institute</span>
+          </div>
+        </div>
+        <div class="edu-card glass-card">
+          <div class="edu-icon"><i class="fas fa-id-card"></i></div>
+          <div class="edu-info">
+            <span class="edu-year">Active</span>
+            <h4 class="edu-degree">Qatar Driving License</h4>
+            <span class="edu-school">License No: 29014405759 — Valid Qatar ID</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Reference -->
+      <div class="ref-block" data-reveal>
+        <div class="section-header" style="margin-bottom:36px;">
+          <span class="section-tag">Reference</span>
+          <h2 class="section-title">Professional <span class="gradient-text">Reference</span></h2>
+        </div>
+        <div class="reference-card glass-card">
+          <div class="ref-left">
+            <div class="ref-avatar"><i class="fas fa-user-tie"></i></div>
+            <div class="ref-info">
+              <h3 class="ref-name">Mr. Naidu Kummarasetty</h3>
+              <span class="ref-company"><i class="fas fa-building"></i> Beton W.L.L, Doha, Qatar</span>
+              <div class="ref-contacts">
+                <a href="tel:+97477660725" class="ref-contact-item">
+                  <i class="fas fa-phone"></i>
+                  <span>+974 7766 0725</span>
+                </a>
+                <a href="mailto:naidu_kummarasetty@Betonqatar.com" class="ref-contact-item">
+                  <i class="fas fa-envelope"></i>
+                  <span>naidu_kummarasetty@Betonqatar.com</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="ref-right">
+            <div class="ref-quote">
+              <i class="fas fa-quote-left"></i>
+              <p>A trusted professional with a proven track record in fuel management, fleet supervision, and logistics administration at Beton W.L.L. Available upon request.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========== CONTACT ========== -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="section-header" data-reveal>
+        <span class="section-tag">Get In Touch</span>
+        <h2 class="section-title">Let's <span class="gradient-text">Connect</span></h2>
+        <p class="section-subtitle">Open to new opportunities in transport supervision &amp; logistics management. Ready to join immediately.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info" data-reveal>
+          <h3 class="contact-info-title">Let's discuss your next opportunity</h3>
+          <p class="contact-info-text">
+            I'm actively seeking new opportunities in Transport Supervision, Fleet Management, and
+            Logistics Administration. With immediate availability and a valid Qatar driving license,
+            I'm ready to make a difference from day one.
+          </p>
+          <div class="contact-cards">
+            <div class="contact-card glass-card">
+              <div class="contact-card-icon"><i class="fas fa-envelope"></i></div>
+              <div class="contact-card-info">
+                <span class="contact-card-label">Email</span>
+                <a href="mailto:djshan23@live.com" class="contact-card-value">djshan23@live.com</a>
+              </div>
+            </div>
+            <div class="contact-card glass-card">
+              <div class="contact-card-icon"><i class="fas fa-phone"></i></div>
+              <div class="contact-card-info">
+                <span class="contact-card-label">Phone</span>
+                <a href="tel:+97477345346" class="contact-card-value">+974 7734 5346 / 7400 5924</a>
+              </div>
+            </div>
+            <div class="contact-card glass-card">
+              <div class="contact-card-icon"><i class="fas fa-map-marker-alt"></i></div>
+              <div class="contact-card-info">
+                <span class="contact-card-label">Location</span>
+                <span class="contact-card-value">Ain Khaled St, Doha, Qatar</span>
+              </div>
+            </div>
+          </div>
+          <div class="contact-socials">
+            <a href="https://www.linkedin.com/in/kirubagaran-shan-645499b9/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.instagram.com/shan_dk/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.behance.net/shandk" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Behance"><i class="fab fa-behance"></i></a>
+            <a href="https://www.facebook.com/dk.shan.3" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          </div>
+        </div>
+        <div class="contact-form-wrap" data-reveal>
+          <form class="contact-form glass-card" id="contactForm" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Your Name</label>
+                <div class="input-wrap">
+                  <i class="fas fa-user"></i>
+                  <input type="text" id="name" name="name" placeholder="John Doe" required />
+                </div>
+                <span class="form-error" id="nameError"></span>
+              </div>
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <div class="input-wrap">
+                  <i class="fas fa-envelope"></i>
+                  <input type="email" id="email" name="email" placeholder="john@example.com" required />
+                </div>
+                <span class="form-error" id="emailError"></span>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <div class="input-wrap">
+                <i class="fas fa-tag"></i>
+                <input type="text" id="subject" name="subject" placeholder="Project Collaboration" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <div class="input-wrap textarea-wrap">
+                <i class="fas fa-comment-dots"></i>
+                <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+              </div>
+              <span class="form-error" id="messageError"></span>
+            </div>
+            <button type="submit" class="btn-primary form-submit" id="submitBtn">
+              <span class="btn-text">Send Message</span>
+              <i class="fas fa-paper-plane btn-icon"></i>
+              <div class="btn-loader" style="display:none;"><i class="fas fa-spinner fa-spin"></i></div>
+            </button>
+            <div class="form-success" id="formSuccess" style="display:none;">
+              <i class="fas fa-check-circle"></i>
+              <span>Message sent successfully! I'll get back to you soon.</span>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="footer-glow"></div>
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#hero" class="footer-logo">K<span>.</span></a>
+          <p class="footer-tagline">Fleet &amp; Transport Operations Incharge<br/>based in Doha, Qatar.</p>
+          <div class="footer-socials">
+            <a href="https://www.linkedin.com/in/kirubagaran-shan-645499b9/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.instagram.com/shan_dk/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.behance.net/shandk" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Behance"><i class="fab fa-behance"></i></a>
+            <a href="https://www.facebook.com/dk.shan.3" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          </div>
+        </div>
+        <div class="footer-links-grid">
+            <h4>Navigation</h4>
+            <ul>
+              <li><a href="#hero">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#skills">Skills</a></li>
+              <li><a href="#experience">Experience</a></li>
+              <li><a href="#reference">Reference</a></li>
+            </ul>
+          </div>
+          <div class="footer-links-col">
+            <h4>Expertise</h4>
+            <ul>
+              <li><a href="#">Fleet Management</a></li>
+              <li><a href="#">Fuel Operations</a></li>
+              <li><a href="#">Logistics Admin</a></li>
+              <li><a href="#">Driver Supervision</a></li>
+            </ul>
+          </div>
+          <div class="footer-links-col">
+            <h4>Legal</h4>
+            <ul>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms of Use</a></li>
+              <li><a href="#">Cookie Policy</a></li>
+              <li><a href="#">Sitemap</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">&copy; 2026 M. Kirubagaran. All rights reserved. Transport Supervisor | Doha, Qatar.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy</a>
+          <span>·</span>
+          <a href="#">Terms</a>
+          <span>·</span>
+          <a href="#">Cookies</a>
+        </div>
+      </div>
+    </div>
+    <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+      <i class="fas fa-chevron-up"></i>
+    </button>
+  </footer>
+
+  <!-- Firebase compat SDK -->
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore-compat.js"></script>
+  <script>
+    const firebaseConfig = {
+      apiKey: "AIzaSyC_e6wYFLRPPRjh67UrVBd-mbN2k9S-_4w",
+      authDomain: "kirubaharan-shan.firebaseapp.com",
+      projectId: "kirubaharan-shan",
+      storageBucket: "kirubaharan-shan.firebasestorage.app",
+      messagingSenderId: "625949953333",
+      appId: "1:625949953333:web:fab9d37b8a881468b7107c"
+    };
+    firebase.initializeApp(firebaseConfig);
+    window.db = firebase.firestore();
+  </script>
+
+  <script src="script.js"></script>
+</body>
+</html>
